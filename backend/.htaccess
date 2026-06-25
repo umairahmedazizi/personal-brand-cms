@@ -1,0 +1,19 @@
+# Defense in depth: block direct web access to backend internals.
+# (The main routing .htaccess lives in public_html.)
+
+# Deny everything by default...
+<FilesMatch "\.(php)$">
+  Require all granted
+</FilesMatch>
+
+# ...but never expose these.
+<Files "config.php">
+  Require all denied
+</Files>
+<Files "config.sample.php">
+  Require all denied
+</Files>
+
+RedirectMatch 403 ^/backend/lib/.*$
+RedirectMatch 403 ^/backend/data/.*$
+RedirectMatch 403 ^/backend/deploy/.*$

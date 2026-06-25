@@ -1,0 +1,13 @@
+{
+  "name": "Adrian Cole — Author & Leader",
+  "short_name": "Adrian Cole",
+  "description": "The official website of Adrian Cole — author, entrepreneur and business leader.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#131313",
+  "theme_color": "#131313",
+  "icons": [
+    { "src": "/assets/img/favicon-256.png", "sizes": "256x256", "type": "image/png" },
+    { "src": "/assets/img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

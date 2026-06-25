@@ -1,0 +1,25 @@
+---
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Adrian Cole — Blog</title>
+  <subtitle>Essays and reflections on leadership, resilience, and the art of being human.</subtitle>
+  <link href="{{ site.url }}/feed.xml" rel="self"/>
+  <link href="{{ site.url }}/blog"/>
+  <id>{{ site.url }}/blog</id>
+  <author><name>Adrian Cole</name></author>
+{%- if collections.posts and collections.posts.length %}
+  <updated>{{ collections.posts[0].date | isoDate }}T00:00:00Z</updated>
+{%- endif %}
+{%- for post in collections.posts %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link href="{{ site.url }}{{ post.url }}"/>
+    <id>{{ site.url }}{{ post.url }}</id>
+    <updated>{{ post.date | isoDate }}T00:00:00Z</updated>
+    <summary>{{ post.data.description }}</summary>
+  </entry>
+{%- endfor %}
+</feed>

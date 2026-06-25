@@ -1,0 +1,13 @@
+{
+  "name": "adrian-cole-site",
+  "version": "1.0.0",
+  "description": "Adrian Cole author website (Eleventy)",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

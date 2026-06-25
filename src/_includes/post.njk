@@ -1,0 +1,49 @@
+---
+layout: base.njk
+---
+<main class="section">
+  <article class="container container--narrow post">
+    <p class="eyebrow" data-reveal><a href="/blog" class="post__back">← The Journal</a></p>
+    <h1 class="display post__title" data-reveal data-reveal-delay="1">{{ title }}</h1>
+    <p class="muted post__meta" data-reveal data-reveal-delay="2">
+      <time datetime="{{ page.date | isoDate }}">{{ page.date | readableDate }}</time> · by Adrian Cole
+    </p>
+
+    <div class="post__body body" data-reveal data-reveal-delay="2">
+      {{ content | safe }}
+    </div>
+
+    <div class="post__foot">
+      <a href="/blog" class="link-arrow">More reflections <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </article>
+
+  <!-- ===================== NEWSLETTER ===================== -->
+  <section class="section bg-surface" style="margin-top:clamp(48px,7vw,88px)">
+    <div class="container container--narrow newsletter">
+      <p class="eyebrow eyebrow--center" data-reveal>Stay Close to the Work</p>
+      <h2 class="headline-md sec-head__title" data-reveal data-reveal-delay="1" style="margin-top:1rem">New reflections, delivered occasionally</h2>
+      <form class="form-inline" data-newsletter
+            data-sheet-action=""
+            data-sheet-field=""
+            data-reveal data-reveal-delay="2" novalidate>
+        <input type="email" name="email" placeholder="Your email address" aria-label="Email address" required />
+        <button type="submit" class="btn btn--primary">Subscribe</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ title | dump | safe }},
+  "datePublished": "{{ page.date | isoDate }}",
+  "author": { "@type": "Person", "name": "Adrian Cole", "url": "https://adriancole.example/" },
+  "publisher": { "@type": "Organization", "name": "Northwind Press" },
+  "image": "{{ site.url }}{{ ogImage or '/assets/img/hero-1280.jpg' }}",
+  "mainEntityOfPage": "{{ site.url }}{{ page.url }}",
+  "description": {{ description | dump | safe }}
+}
+</script>

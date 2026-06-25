@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Application internals — not meant for indexing
+Disallow: /admin/
+Disallow: /api/
+Disallow: /backend/
+
+Sitemap: https://adriancole.example/sitemap.xml

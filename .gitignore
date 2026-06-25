@@ -1,0 +1,8 @@
+﻿node_modules/
+_site/
+
+# Backend — secrets & runtime data (never commit these)
+backend/config.php
+backend/data/
+backend/uploads/*
+!backend/uploads/.gitkeep
