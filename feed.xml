@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Adrian Cole — Blog</title>
+  <subtitle>Essays and reflections on leadership, resilience, and the art of being human.</subtitle>
+  <link href="https://adriancole.example/feed.xml" rel="self"/>
+  <link href="https://adriancole.example/blog"/>
+  <id>https://adriancole.example/blog</id>
+  <author><name>Adrian Cole</name></author>
+</feed>
