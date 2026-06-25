@@ -1,5 +1,5 @@
 /* =============================================================
-   MUSTAFA KAMAL — interactions & motion
+   ADRIAN COLE — interactions & motion
    ============================================================= */
 (function () {
   "use strict";
